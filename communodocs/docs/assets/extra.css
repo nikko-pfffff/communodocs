@@ -1,0 +1,18 @@
+
+.md-tabs,
+.md-header,
+header {
+  background-image: url('images/communodocs_banner_2.png');
+  background-size: auto;
+  background-attachment: fixed;
+}
+.md-footer-nav,
+.md-footer-meta {
+    background: #c04f0d;
+}
+.md-grid {
+  max-width: 1440px;
+}
+
+
+
