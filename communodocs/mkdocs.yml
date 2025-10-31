@@ -1,4 +1,53 @@
 ---
-site_name: My Docs
+site_name: Communodocs
+site_url: https://nikko-pfffff.github.io/communodocs/
+repo_url: https://github.com/nikko-pfffff/communodocs
+
+nav:
+  - Home: index.md
+
 theme:
   name: material
+  palette:
+
+    # Light mode
+    - scheme: default
+      primary: deep orange
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: yellow
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Noto Sans
+  language: fr
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.code.expand
+    - content.tabs.link
+    - navigation.instant
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.expand
+    # - navigation.tracking
+    # - navigation.indexes
+    # - navigation.top
+
+plugins:
+  - search
+  - literate-nav:
+      nav_file: _nav.md
+  - git-revision-date-localized
+  - glightbox
+  - include-markdown
+
+extra_css:
+  - assets/extra.css

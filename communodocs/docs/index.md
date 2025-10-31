@@ -1,5 +1,3 @@
-## Communodocs
-
 Cet espace est un espace de documentation personnelle à la base... Mais comme dans notre métier le bon état d'esprit est de partager ses connaissances, et que l'entraide est important pour progresser ensemble, j'ai décidé de rendre ce projet public.
 
 N'hésitez pas à faire des retours, à proposer des améliorations, ou même à signaler des erreurs.
