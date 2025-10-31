@@ -35,11 +35,11 @@ theme:
     - content.tabs.link
     - navigation.instant
     - navigation.tabs
-    # - navigation.tabs.sticky
-    # - navigation.expand
-    # - navigation.tracking
-    # - navigation.indexes
-    # - navigation.top
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
 
 plugins:
   - search
