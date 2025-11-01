@@ -1,8 +1,7 @@
 ---
 name: Build GitHub Pages
-on:
-  pull_request:
-    types: [closed]
+'on':
+  push:
     branches:
       - main
     paths:
