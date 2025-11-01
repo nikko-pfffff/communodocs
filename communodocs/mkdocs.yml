@@ -8,23 +8,6 @@ nav:
 
 theme:
   name: material
-  palette:
-
-    # Light mode
-    - scheme: default
-      primary: deep orange
-      accent: red
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-
-    # Dark mode
-    - scheme: slate
-      primary: deep orange
-      accent: yellow
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
   font:
     text: Noto Sans
   language: fr
@@ -40,6 +23,32 @@ theme:
     - navigation.tracking
     - navigation.indexes
     - navigation.top
+
+  palette:
+    # Light mode
+    - scheme: default
+      primary: deep orange
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: yellow
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - tables
+  - admonition
+  # - pymdownx.superfences
+  # - pymdownx.tabbed:
+  #     alternate_style: true
+  # - pymdownx.snippets
 
 plugins:
   - search
