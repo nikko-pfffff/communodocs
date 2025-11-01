@@ -3,5 +3,5 @@
 * Outils
     * IDE
         * [Visual Studio Code](tools/ide/vscode.md)
-* IA
+* [IA](ia/index.md)
     * [Prompts](ia/prompts.md)
