@@ -1,0 +1,7 @@
+autolink-references-mkdocs-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-glightbox
+mkdocs-literate-nav
+mkdocs-material
+mkdocs-include-markdown-plugin
+mkdocs
