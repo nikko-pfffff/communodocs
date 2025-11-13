@@ -2,5 +2,67 @@ Afin de présenter un swagger / openAPI doc pour une API Gateway AWS, nous avons
 Mais après l'attaque de type supply chain dans les pkg npm, nous avons laissé de côté ce code pour le réécrire en python.
 
 ```python
-A venir
+import json
+import os
+import boto3
+from fastapi import FastAPI
+from mangum import Mangum
+
+# Initialize AWS clients
+s3_client = boto3.client('s3', region_name=os.environ.get('REGION', 'eu-west-3'))
+
+
+def get_swagger_config():
+    """Load Swagger document from S3"""
+    
+    s3_params = {
+        'Bucket': os.environ.get('S3BUCKET'),
+        'Key': os.environ.get('S3KEYFILE')
+    }
+    print(f"S3 params: {json.dumps(s3_params)}")
+    
+    try:
+        response = s3_client.get_object(**s3_params)
+        file_content = response['Body'].read().decode('utf-8')
+        print("Swagger document loaded successfully")
+        return json.loads(file_content)
+    except Exception as e:
+        print(f"Error loading swagger document: {str(e)}")
+        raise e
+
+
+app = FastAPI(
+    title="Mon API FastAPI",
+    description="Exemple d'API FastAPI déployée sur AWS Lambda avec SAM",
+    version="1.0.0",
+    docs_url="/docs",
+    openapi_url="/openapi.json"
+)
+
+# Override the OpenAPI schema with the one from S3
+# openapi fonction needs to be callable
+app.openapi = get_swagger_config
+
+@app.get("/")
+async def root():
+    """Redirect to docs"""
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse(url="/docs")
+
+# Create Mangum handler
+handler = Mangum(app)
+
+
+def lambda_handler(event, context):
+    """AWS Lambda handler function"""
+    print("Lambda event:")
+    print(json.dumps(event))
+    
+    # Call the Mangum handler with event and context
+    return handler(event, context)
+
+if __name__ == "__main__":
+    import uvicorn
+    # For local testing
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 ```
