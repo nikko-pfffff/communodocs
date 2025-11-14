@@ -11,33 +11,40 @@ from mangum import Mangum
 # Initialize AWS clients
 s3_client = boto3.client('s3', region_name=os.environ.get('REGION', 'eu-west-3'))
 
+# Global cache for OpenAPI schema
+_openapi_schema = None
+
 
 def get_swagger_config():
-    """Load Swagger document from S3"""
+    """Load Swagger document from S3 (with caching)"""
+    global _openapi_schema
+    
+    if _openapi_schema is not None:
+        print("Returning cached OpenAPI schema")
+        return _openapi_schema
     
     try:
+        print("Loading OpenAPI schema from S3")
         response = s3_client.get_object(
             Bucket=os.environ.get('S3BUCKET'),
             Key=os.environ.get('S3KEYFILE')
         )
         file_content = response['Body'].read().decode('utf-8')
+        _openapi_schema = json.loads(file_content)
         print("Swagger document loaded successfully")
-        return json.loads(file_content)
+        app.openapi_schema = _openapi_schema
+        return app.openapi_schema
     except Exception as e:
         print(f"Error loading swagger document: {str(e)}")
         raise e
 
-
+# Need to add apigateway path (as it handle this as a proxy) before openapi.json
 app = FastAPI(
-    title="API title",
-    description="API description",
-    version="1.0.0",
-    docs_url="/docs",
-    openapi_url="/openapi.json"
+    openapi_url="/docs/openapi.json"
 )
 
 # Override the OpenAPI schema with the one from S3
-# openapi fonction needs to be callable
+# This will be called when /docs or /openapi.json is accessed
 app.openapi = get_swagger_config
 
 @app.get("/")
