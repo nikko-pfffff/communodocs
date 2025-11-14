@@ -15,14 +15,11 @@ s3_client = boto3.client('s3', region_name=os.environ.get('REGION', 'eu-west-3')
 def get_swagger_config():
     """Load Swagger document from S3"""
     
-    s3_params = {
-        'Bucket': os.environ.get('S3BUCKET'),
-        'Key': os.environ.get('S3KEYFILE')
-    }
-    print(f"S3 params: {json.dumps(s3_params)}")
-    
     try:
-        response = s3_client.get_object(**s3_params)
+        response = s3_client.get_object(
+            Bucket=os.environ.get('S3BUCKET'),
+            Key=os.environ.get('S3KEYFILE')
+        )
         file_content = response['Body'].read().decode('utf-8')
         print("Swagger document loaded successfully")
         return json.loads(file_content)
@@ -32,8 +29,8 @@ def get_swagger_config():
 
 
 app = FastAPI(
-    title="Mon API FastAPI",
-    description="Exemple d'API FastAPI déployée sur AWS Lambda avec SAM",
+    title="API title",
+    description="API description",
     version="1.0.0",
     docs_url="/docs",
     openapi_url="/openapi.json"
@@ -65,4 +62,5 @@ if __name__ == "__main__":
     import uvicorn
     # For local testing
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 ```
