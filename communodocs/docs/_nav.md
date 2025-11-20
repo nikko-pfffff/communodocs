@@ -3,6 +3,8 @@
 * Outils
     * IDE
         * [Visual Studio Code](tools/ide/vscode.md)
+    * Linux environment setup
+        * [liquidprompt](tools/linux_env/liquidprompt.md)
 * [IA](ia/index.md)
     * [Prompts](ia/prompts.md)
     * [Copilot Studio](ia/copilot_studio.md)
