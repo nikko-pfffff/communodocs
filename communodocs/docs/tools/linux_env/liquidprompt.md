@@ -9,6 +9,6 @@ Liquidprompt est un outil qui permet de personnaliser l'invite de commande pour 
 
 Voici le [repo github](https://github.com/liquidprompt/liquidprompt) pour le récupérer.<br>
 
-Voici la [domcumentation](https://liquidprompt.readthedocs.io/en/stable/) pour le personnaliser.<br>
+Voici la [documentation](https://liquidprompt.readthedocs.io/en/stable/) pour le personnaliser.<br>
 
 Voici mon fichier de configuration perso que j'utilise [~/.config/liquidpromptrc](https://github.com/nikko-pfffff/communodocs/blob/main/communodocs/files/liquidpromptrc).<br>
