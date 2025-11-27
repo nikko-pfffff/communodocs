@@ -9,6 +9,9 @@
     * [Prompts](ia/prompts.md)
     * [Copilot Studio](ia/copilot_studio.md)
     * [Agents](ia/agents.md)
+    * [Workflows](ia/workflow_tools/compare.md)
+    * AWS
+        * [Get Credentials](ia/aws/get_credentials.md)
 * Kubernetes
     * [Tips](kubernetes/tips.md)
 * Process & Guidelines
