@@ -8,7 +8,9 @@
 * [IA](ia/index.md)
     * [Prompts](ia/prompts.md)
     * [Copilot Studio](ia/copilot_studio.md)
-    * [Agents](ia/agents.md)
+    * Agents
+        * [MCP Node Example](ia/agents/mcp_node.md)
+        * [OpenAPI Agent Example](ia/agents/openapi_node.md)
     * [Workflows](ia/workflow_tools/compare.md)
     * AWS
         * [Get Credentials](ia/aws/get_credentials.md)
