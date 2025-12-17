@@ -10,10 +10,11 @@
     * [Prompts](ia/prompts.md)
     * [Copilot Studio](ia/copilot_studio.md)
     * Agents
-        * [MCP Node Examples]
+        * MCP Node Examples
             * [LangChain](ia/agents/mcp_nodes/langchain_mcp_node.md)
             * [HuggingFace](ia/agents/mcp_nodes/huggingface_mcp_node.md)
-        * [OpenAPI Agent Example](ia/agents/openapi_node.md)
+        * [OpenAPI Node Example](ia/agents/openapi_node.md)
+        * [Video Node Example](ia/agents/langchain_video_node.md)
     * [Workflows](ia/workflow_tools/compare.md)
     * AWS
         * [Get Credentials](ia/aws/get_credentials.md)
