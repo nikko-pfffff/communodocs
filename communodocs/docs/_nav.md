@@ -17,7 +17,7 @@
         * [Video Node Example](ia/agents/langchain_video_node.md)
     * [Workflows](ia/workflow_tools/compare.md)
     * MCP
-      * [Test your MCP server](ia/MCP/mcp_test.md)
+        * [Test your MCP server](ia/MCP/mcp_test.md)
     * AWS
         * [Get Credentials](ia/aws/get_credentials.md)
 * Kubernetes
