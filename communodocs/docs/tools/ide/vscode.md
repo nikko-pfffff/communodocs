@@ -8,6 +8,7 @@ Voici une liste des plugins que j'utilise le plus souvent :
     !!! Info
         Extension qui permet de connecter des LLMs qui n'ont pas de plugin dédié. Elle apporte une interface de Chat, un mode Agent pour les modèles qui le supportent, ainsi que l'autocomplétion.<br>
         Par exemple ici je voulais tester codestral de Mistral, mais pour l'instant ce n'est pas très concluant. :face_with_raised_eyebrow:
+        Par contre Continue permet de taper des LLMs locaux par exemple avec ollama
 
 - GitHub Copilot (GitHub.copilot)
 - Live Share (MS-vsliveshare.vsliveshare)
