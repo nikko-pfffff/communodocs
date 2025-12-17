@@ -27,6 +27,7 @@ On a ainsi une page web qui nous permet de tester les méthodes (tools, ressourc
 ### Si on developpe son MCP avec Gradio
 
 Gradio:
+
 - converti les fonctions en tools
 - fait le mapping des  arguments
 - met en place une communication HTTP+SSE
@@ -34,7 +35,7 @@ Gradio:
 
 ## En mode debug avec un LLM
 
-Il existe un client MCP light `Tiny Agent` qui permet facilement de connecter son MCP à un agent pour tester l'utilisation du server.
+Il existe un client MCP light `Tiny Agent` qui permet facilement de connecter son MCP à un agent pour tester l'utilisation du server.<br>
 Cela utilise des models sur HuggingFace, il faut donc être connecté et avoir un token API avec les permissions `Make calls to Inference Providers`.
 
 Un petit json de configuration (my-agent/agent.json)
