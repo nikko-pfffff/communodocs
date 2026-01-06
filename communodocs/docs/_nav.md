@@ -7,7 +7,9 @@
         * [liquidprompt](tools/linux_env/liquidprompt.md)
     * [Marp](tools/marp.md)
 * [IA](ia/index.md)
-    * [Prompts](ia/prompts.md)
+    * Prompts
+        * [General](ia/prompts/prompts_general.md)
+        * [IDE Coding Agent](ia/prompts/prompt_ide_coding_agent.md)
     * [Copilot Studio](ia/copilot_studio.md)
     * Agents
         * MCP Node Examples
