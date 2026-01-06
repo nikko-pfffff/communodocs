@@ -9,7 +9,7 @@
     - Les MR/review sont prioritaires si elles font partie du sprint courant ou urgence immédiate
     - Les MR/review doivent faire partir d'un ticket du sprint, sinon elles ne sont pas prioritaires
     - Les MR/review doivent avoir été testées avant
-    - Les Review ne sont pas faites pour corriger ce que vous n'avez pas pris le temps de relire, il y a des IA pour ça 🤣
+    - Les Review ne sont pas faites pour corriger ce que vous n'avez pas pris le temps de relire
 
 ### Fil conducteur pour dérouler la Review
 
