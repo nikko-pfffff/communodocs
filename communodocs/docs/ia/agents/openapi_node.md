@@ -62,3 +62,20 @@ if __name__ == "__main__":
     response = agent.run(user_request)
     print(response)  # Output the response from the agent
 ```
+
+Je viens de voir dans une formation un moyen `fast` (jeu de mot :grink: ) pour transformer une doc OpenAPI en MCP avec FastAPI.
+Avec le framedwork FastMCP on peut directement faire ceci:
+
+```python
+# Create the MCP server
+mcp = FastMCP.from_openapi(
+    openapi_spec=openapi_spec,
+    client=client,
+    name="My API Server"
+)
+
+if __name__ == "__main__":
+    mcp.run()
+```
+
+Il faut que je creuse parce qu'il semble que le spec OpenAPI soit transformé doit être distant.
