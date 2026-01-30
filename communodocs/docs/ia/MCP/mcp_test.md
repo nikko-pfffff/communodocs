@@ -38,6 +38,11 @@ Gradio:
 Il existe un client MCP light `Tiny Agent` qui permet facilement de connecter son MCP à un agent pour tester l'utilisation du server.<br>
 Cela utilise des models sur HuggingFace, il faut donc être connecté et avoir un token API avec les permissions `Make calls to Inference Providers`.
 
+```bash
+uv pip install "huggingface_hub[mcp]>=0.32.0"
+uv run hf auth login # si LLM distant
+```
+
 Un petit json de configuration (my-agent/agent.json)
 ```json
 {
@@ -56,5 +61,5 @@ Un petit json de configuration (my-agent/agent.json)
 ```
 et
 ```bash
-npx @huggingface/tiny-agents run ./my-agent
+uv run tiny-agents run agent.json
 ```
