@@ -1,6 +1,6 @@
 # Tester son MCP 
 
-## En mode debug standlalone
+## En mode debug standalone
 
 ### Si on developpe des SDK
 comme FastMCP en python ou McpServer en javascript, on a la possibilité de lancer inspector afin de tester le server.

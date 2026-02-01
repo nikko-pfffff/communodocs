@@ -16,7 +16,7 @@
         * [OpenAPI Node Example](ia/agents/openapi_node.md)
         * [Video Node Example](ia/agents/langchain_video_node.md)
     * [Workflows](ia/workflow_tools/compare.md)
-    * MCP
+    * [MCP](ia/MCP/mcp.md)
         * [Test your MCP server](ia/MCP/mcp_test.md)
     * AWS
         * [Get Credentials](ia/aws/get_credentials.md)
