@@ -6,6 +6,8 @@
     * Linux environment setup
         * [liquidprompt](tools/linux_env/liquidprompt.md)
     * [Marp](tools/marp.md)
+    * [Server Webhook](tools/webhook_server.md)
+    * [Exposer un service local](tools/expose_local_service.md)
 * [IA](ia/index.md)
     * [Prompts](ia/prompts.md)
     * [Copilot Studio](ia/copilot_studio.md)
@@ -31,3 +33,6 @@
         * [swagger](aws/lambda/swagger.md)
     * API Gateway
         * [Authorizer](aws/apigw/authorizer.md)
+* GCP
+    * Compute Engine
+        * [Debug Startup Script](gcp/compute_engine/debug.md)
